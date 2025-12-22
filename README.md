@@ -21,3 +21,8 @@ Projeto pessoal, que tem como objetivo desenvolver uma aplicação web de bloco 
     * Sequelize.
 >[!NOTE]
 >Futuramente será alterado para utilizar Django
+
+- Banco de Dados:
+    * SQLite.
+>[!NOTE]
+>Também será alterado futuramente
