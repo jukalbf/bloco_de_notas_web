@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Bloco de Notas Online</title>
+  </head>
+  <body>
+    <h1>Bloco de Notas Online</h1>
+    <main class="main-container">
+      <form action="post" class="form">
+        <h3>Crie uma nova nota</h3>
+        <label for="title">
+          <span>Título</span>
+          <input type="text" name="title-input" class="title-input" />
+        </label>
+        <label for="content">
+          <span>Suas ideias...</span>
+          <textarea name="textarea-content" class="textarea-content"></textarea>
+        </label>
+        <button type="submit" class="button-submit-note">Criar Nota</button>
+      </form>
+      <ul class="notes-list-container"></ul>
+    </main>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

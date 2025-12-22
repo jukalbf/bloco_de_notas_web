@@ -1,0 +1,163 @@
+:root {
+  --transparent: rgba(0, 0, 0, 0);
+  --light-shadow: rgba(0, 0, 0, 0.25);
+  --input-border-color: rgb(100, 185, 220);
+  --light-black-border: rgba(0, 0, 0, 0.2);
+  --note-bg-color: rgb(255, 215, 195);
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  margin: 1rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 4px 0 var(--light-shadow);
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  width: 100%;
+}
+
+h1 {
+  /* font-size: 2.2rem; */
+  padding: 0.6rem 0px;
+  box-sizing: border-box;
+}
+
+/* h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}  */
+
+main {
+  display: flex;
+  gap: 0.8rem;
+}
+
+form,
+.notes-list-container {
+  padding: 0.8em;
+  border-radius: 0.8em;
+  border: 1px solid var(--light-black-border);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6em;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4em;
+}
+
+span {
+  font-weight: bold;
+}
+
+input {
+  padding: 0.4em;
+  border: 1px solid var(--input-border-color);
+  border-radius: 0.4em;
+  box-sizing: border-box;
+  outline: 0.6px;
+}
+
+textarea {
+  flex: 1;
+  resize: none;
+  padding: 0.4em;
+  border: 1px solid var(--input-border-color);
+  outline: 0.6px;
+  border-radius: 0.4em;
+  box-sizing: border-box;
+}
+
+.button-submit-note,
+.button-goto-note {
+  flex: 1;
+  color: white;
+  padding: 1em;
+  text-align: center;
+  border-radius: 0.2em;
+}
+
+.button-submit-note {
+  background-color: black;
+}
+
+.notes-list-container {
+  padding: 0.6em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4em;
+  flex: 1;
+}
+
+.note-item {
+  background-color: var(--note-bg-color);
+  border-radius: 0.8em;
+  border: 2px solid var(--light-black-border);
+  transition: all 0.2s ease-in-out;
+  padding: 0.6em;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  min-height: 4em;
+  max-height: 10em;
+}
+
+.note-item:hover {
+  border: 2px solid var(--input-border-color);
+
+  h2 {
+    opacity: 1;
+  }
+
+  p {
+    opacity: 1;
+  }
+}
+
+h2,
+p {
+  transition: all 0.2s ease-in-out;
+  opacity: 0.4;
+}
+
+p {
+  flex: 2;
+}
+
+.button-goto-note {
+  background-color: var(--input-border-color);
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  border: 2px solid var(--input-border-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.6em;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-goto-note:hover {
+  border: 2px solid white;
+}
