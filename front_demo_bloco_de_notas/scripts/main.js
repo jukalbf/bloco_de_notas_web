@@ -10,10 +10,10 @@ const listContainer = document.querySelector(".notes-list-container");
 getAndPlaceData();
 
 function getAndPlaceData() {
-  const { liElement, h2Element, paragraphElement, buttonRedirectElement } =
-    createListElements();
-
   fakeData.forEach((item) => {
+    const { liElement, h2Element, paragraphElement, buttonRedirectElement } =
+      createListElements();
+
     listContainer.appendChild(liElement);
 
     liElement.appendChild(h2Element);
