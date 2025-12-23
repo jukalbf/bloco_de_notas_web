@@ -1,16 +1,21 @@
-const fakeData = [
-  { title: "Teste_01", content: "Teste de nota apenas para previa" },
-  { title: "Teste_02", content: "Teste de nota apenas para previa" },
-  { title: "Teste_03", content: "Teste de nota apenas para previa" },
-  { title: "Teste_04", content: "Teste de nota apenas para previa" },
-];
+import { getAllNotes } from "./service.js";
+
+const notesData = getAllNotes();
 
 const listContainer = document.querySelector(".notes-list-container");
 
 getAndPlaceData();
 
 function getAndPlaceData() {
-  fakeData.forEach((item) => {
+  if (!Array.isArray(notesData)) {
+    const notesNotFoundElement = document.createElement("h2");
+    notesNotFoundElement.className = "not-found-msg";
+    notesNotFoundElement.innerText = "Não foi possível encontrar notas";
+    listContainer.appendChild(notesNotFoundElement);
+    return;
+  }
+
+  notesData.forEach((item) => {
     const { liElement, h2Element, paragraphElement, buttonRedirectElement } =
       createListElements();
 
