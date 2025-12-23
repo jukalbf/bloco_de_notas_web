@@ -116,10 +116,16 @@ textarea {
   padding: 0.6em;
   box-sizing: border-box;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   gap: 0.4em;
   flex: 1;
   overflow-y: auto;
+}
+
+.not-found-msg {
+  text-align: center;
 }
 
 .note-item {
