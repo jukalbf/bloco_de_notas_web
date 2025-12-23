@@ -1,8 +1,11 @@
-import { getAllNotes } from "./service.js";
+import { getAllNotes, postNewNote } from "./service.js";
 
-const notesData = getAllNotes();
+const notesData = await getAllNotes();
 
 const listContainer = document.querySelector(".notes-list-container");
+const form = document.querySelector(".form");
+
+form.addEventListener("submit", postNewNote);
 
 getAndPlaceData();
 
